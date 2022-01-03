@@ -1,6 +1,18 @@
+/* FONT */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Bold.woff2') format('woff2'),
+  url('fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Custom Prop */
 :root{
-  
+  --title-color: rgb(59, 138, 207);
+  --bottom-title-color: rgb(170, 170, 170);
+  --dash-color: rgb(211, 230, 244);
 }
 
 /* GLOBAL STYLES */
@@ -26,7 +38,11 @@ body{
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto", "Arial", sans-serif;
-  background-color: var();
+  background-image: url(/img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  content:"";
   color: var();
 }
 
@@ -49,4 +65,114 @@ img{
 /* MAIN CONTENT */
 .main-content{
   flex-grow: 1;
+}
+
+.boarding-pass-wrapper {
+  width: 100%;
+  max-width: 400px;
+  height: 460px;
+  margin: 100px auto;
+  padding: 50px 40px 40px 40px;
+  background-color: #fff;
+
+}
+.boarding-pass-header {
+  display: flex;
+  align-items: center;
+}
+.place-from-wrapper {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.place-upper{
+  padding: 0;
+  margin: 0;
+  font-size: 54px;
+  font-weight: 700;
+  font-family: "Montserrat" sans-serif;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.place-small{
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: var(--bottom-title-color);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.devider {
+  width: 30px;
+  height: 6px;
+  border: 0;
+  background-color: var(--dash-color);
+}
+
+.place-to-full {
+  text-align: right;
+}
+
+/* FLIGHT INFO */
+.flight-info {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+
+}
+.wrapper {
+  margin-right: 60px;
+}
+.detail {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat" sans-serif;
+  color: var(--bottom-title-color);
+  text-transform: uppercase;
+}
+.detail-number {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Montserrat" sans-serif;
+  color: #333;
+  text-transform: uppercase;
+}
+.gate-wrapper {
+}
+.seat-wrapper {
+}
+
+
+/* PESSENGER INFO */
+
+
+.pessenger-info-wrapper {
+  display: flex;
+  padding-top: 10px;
+}
+.pessenger-info {
+  margin-right: 50px;
+}
+.pessenger-info-item:not(:last-child) {
+  padding-bottom: 10px;
+}
+.person-detail {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Montserrat" sans-serif;
+  color: var(--bottom-title-color);
+  text-transform: uppercase;
+}
+.detail-person {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Montserrat" sans-serif;
+  color: #333;
+  text-transform: uppercase;
+}
+.person-qr {
 }
